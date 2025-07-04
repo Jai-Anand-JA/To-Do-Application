@@ -41,8 +41,10 @@ Java-todoapplication/
 Follow these steps to download the project on your local machine:
 
 1. **Clone the Repository**
+   
    git clone https://github.com/Jai-Anand-JA/To-Do-Application
 3. **Navigate to the Project Directory**
+   
    cd To-Do-Application
 
 ---
