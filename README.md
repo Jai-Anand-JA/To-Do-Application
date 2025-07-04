@@ -42,8 +42,8 @@ Follow these steps to download the project on your local machine:
 
 1. **Clone the Repository**
    git clone https://github.com/Jai-Anand-JA/To-Do-Application
-2. **Navigate to the Project Directory**
-    cd To-Do-Application
+3. **Navigate to the Project Directory**
+   cd To-Do-Application
 
 ---
 
@@ -54,16 +54,14 @@ From inside the project root (where `src` folder exists):
 ### 1️. Compile
 javac -d out -sourcepath src src/com/backend/todo/view/ToDoView.java
 
-### 2️. Run
-Windows (PowerShell / CMD):
+### 2️. Run  
 java -cp "out;src" com.backend.todo.view.ToDoView
-macOS / Linux:
-java -cp "out:src" com.backend.todo.view.ToDoView
 
 ---
 
 ## 💾 Data Storage
-All tasks are serialized to a binary file:
+All tasks are serialized to a binary file:  
+
 src/files/tasks.dat
 
 ---
