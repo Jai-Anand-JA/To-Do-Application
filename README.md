@@ -37,6 +37,15 @@ Java-todoapplication/
 - Works on Windows, macOS, Linux (adjust classpath separator `;` vs `:`)
 
 ---
+## Installation
+Follow these steps to download the project on your local machine:
+
+1. **Clone the Repository**
+   git clone https://github.com/Jai-Anand-JA/To-Do-Application
+2. **Navigate to the Project Directory**
+    cd tic-tac-toe-game
+
+---
 
 ## How to Compile & Run
 
@@ -65,7 +74,7 @@ src/files/tasks.dat
 3. Update Task
 4. Search a Task
 5. Print All Tasks
-6. Exit from Application
+6. Exit from Application 
 Enter your choice:
 
 ---
