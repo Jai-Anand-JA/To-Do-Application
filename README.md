@@ -1,44 +1,81 @@
-# Java-todoapplication
-- This is a console-based application, in which the user can create his todo list and can perform all the CRUD operations on it.
-- This application has a loosely coupled architecture for easy updation of the code and new features can be added easily.
-- Output is in the Customized Table Format.
+# To-Do Java Console Application
 
-- To run the application, follow these steps:
-  -  Create a new project in Eclipse workspace.
-  -  Clone the application and move the contents of src folder into the project's src folder.
-  -  Run the application (Ctrl + F11).
+A **console-based Java To-Do List application** that allows you to create, update, search, delete, and display tasks.  
+It uses Java object serialization (`tasks.dat`) to persist your data between runs.
 
-# Screenshots
-## Adding new task
+---
 
-- First Task:
+## Features
 
-![image](https://user-images.githubusercontent.com/47317902/122463968-e6abcd00-cfd3-11eb-8f6c-d4f2ebf9a92f.png)
+✅ Add new tasks with name, description, and completion deadline  
+✅ Update task name, description, deadline, or status  
+✅ Soft-delete tasks (keeps in data file, marked as `Deleted`)  
+✅ Search tasks by name  
+✅ Print all tasks in a formatted table
 
-- Second Task:
+---
 
-![image](https://user-images.githubusercontent.com/47317902/122464045-fc20f700-cfd3-11eb-8033-8632c2cc3986.png)
+## 📂 Project Structure
+Java-todoapplication/
+├─ src/
+│ └─ com/
+│ └─ backend/
+│ └─ todo/
+│ ├─ dto/
+│ ├─ repo/
+│ ├─ utils/
+│ └─ view/
+├─ src/files/tasks.dat # created at runtime
+├─ messages.properties
+└─ out/ # generated compiled classes
 
-## Printing all tasks
+---
 
-![image](https://user-images.githubusercontent.com/47317902/122464124-1b1f8900-cfd4-11eb-8d7d-f03af15e43b7.png)
+## ⚙️ Requirements
 
-## Updating a task detail
+- Java 11 or later (tested on Java 21)
+- Works on Windows, macOS, Linux (adjust classpath separator `;` vs `:`)
 
-![image](https://user-images.githubusercontent.com/47317902/122464259-46a27380-cfd4-11eb-9f4c-d1b4178e1364.png)
+---
 
-## Searching a task
+## How to Compile & Run
 
-![image](https://user-images.githubusercontent.com/47317902/122464683-c03a6180-cfd4-11eb-9389-316f64a6b1f4.png)
+From inside the project root (where `src` folder exists):
 
-- Searching a task, if entered wrong task name
+### 1️. Compile
+javac -d out -sourcepath src src/com/backend/todo/view/ToDoView.java
 
-![image](https://user-images.githubusercontent.com/47317902/122464476-84070100-cfd4-11eb-8151-ec16d2350822.png)
-  
-## Deleting a task
+### 2️. Run
+Windows (PowerShell / CMD):
+java -cp "out;src" com.backend.todo.view.ToDoView
+macOS / Linux:
+java -cp "out:src" com.backend.todo.view.ToDoView
 
-![image](https://user-images.githubusercontent.com/47317902/122464780-e06a2080-cfd4-11eb-834c-0cb1a782e413.png)
+---
 
-Note: In Delete operation, the task will not be deleted from the file. Its status will be changed to Deleted and update and search operations can't be performed on it further. You can still view the deleted tasks, using print all tasks operation.
+## 💾 Data Storage
+All tasks are serialized to a binary file:
+src/files/tasks.dat
 
-![image](https://user-images.githubusercontent.com/47317902/122465024-2aeb9d00-cfd5-11eb-81f1-dd581e52682f.png)
+---
+
+## Sample Usage
+1. Add a New Task
+2. Delete Task
+3. Update Task
+4. Search a Task
+5. Print All Tasks
+6. Exit from Application
+Enter your choice:
+
+---
+
+## Notes
+- Dates are entered in the format: dd/MM/yyyy HH:mm (e.g. 08/07/2025 14:00).
+- Deleted tasks are retained with status Deleted for audit.
+- Application handles missing dates gracefully by printing N/A.
+
+---
+
+## Author
+- Jai Anand
